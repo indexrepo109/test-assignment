@@ -1,0 +1,26 @@
+:root { font-family: Arial, sans-serif; color: #172033; background: #f4f7fb; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { width: min(1000px, calc(100% - 32px)); margin: 48px auto; }
+h1 { margin-bottom: 8px; }
+.intro { color: #5e687b; }
+.panel { margin-top: 28px; padding: 20px; background: white; border: 1px solid #dfe5ef; border-radius: 12px; }
+.controls { display: flex; justify-content: space-between; gap: 16px; margin-bottom: 20px; }
+label { display: grid; gap: 6px; font-weight: 600; }
+input, select { min-width: 220px; padding: 10px; border: 1px solid #aeb8c8; border-radius: 7px; font: inherit; }
+input:focus, select:focus { outline: 3px solid #2563eb44; border-color: #2563eb; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 12px; border-bottom: 1px solid #e7ebf2; text-align: left; }
+th { background: #f8fafc; }
+#emptyState { padding: 28px; text-align: center; color: #5e687b; }
+.status { display: inline-block; padding: 4px 9px; border-radius: 999px; font-size: .82rem; font-weight: 700; text-transform: capitalize; background: #edf1f6; color: #344054; }
+@media (max-width: 600px) {
+  main { margin: 24px auto; }
+  .controls { flex-direction: column; }
+  input, select { min-width: 0; width: 100%; }
+  .table-container { overflow-x: auto; }
+}
+/* TODO 2 (candidate): Add readable background and text colors for these states. */
+.status--completed { }
+.status--pending { }
+.status--failed { }
